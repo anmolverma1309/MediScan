@@ -1,0 +1,187 @@
+.how-page__hero {
+    padding: 130px 0 60px;
+    background: var(--gradient-hero);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.how-page__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.how-page__subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* Pipeline */
+.pipeline-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 860px;
+}
+
+.pipeline-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.pipeline-step__connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pipeline-step__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.pipeline-step__line {
+    width: 2px;
+    flex: 1;
+    min-height: 40px;
+    background: linear-gradient(180deg, var(--border-subtle), transparent);
+    margin: 8px 0;
+}
+
+.pipeline-step__content {
+    padding-bottom: 40px;
+}
+
+.pipeline-step__num {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+}
+
+.pipeline-step__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.pipeline-step__desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.pipeline-step__detail {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid;
+    font-family: 'Courier New', monospace;
+}
+
+/* Flow Diagram */
+.how-flow-section {
+    background: var(--bg-dark);
+}
+
+.flow-diagram {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.flow-diagram__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.flow-node {
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 130px;
+}
+
+.flow-node__label {
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.flow-node__sub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+}
+
+/* Safety */
+.safety-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: var(--transition);
+}
+
+.safety-card:hover {
+    border-color: rgba(63, 185, 80, 0.3);
+    transform: translateY(-3px);
+}
+
+.safety-card__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.safety-card__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.safety-card__desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .pipeline-step {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .flow-diagram {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
